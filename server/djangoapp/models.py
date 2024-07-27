@@ -12,7 +12,7 @@ class CarMake(models.Model):
 
 class CarModel(models.Model):
     # Many-to-One relationship
-    car_make = models.ForeignKey(CarMake, on_delete=models.CASCADE) 
+    car_make = models.ForeignKey(CarMake, on_delete=models.CASCADE)
     name = models.CharField(max_length=100)
     CAR_TYPES = [
         ('SEDAN', 'Sedan'),
@@ -29,4 +29,3 @@ class CarModel(models.Model):
 
     def __str__(self):
         return self.name  # Return the name as the string representation
-
